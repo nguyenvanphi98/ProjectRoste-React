@@ -302,7 +302,7 @@ export const ButtonIcon = styled.div`
   align-items: center;
   cursor: pointer;
   &:hover {
-    background-color: ${(props) => props.theme.colors.geyser};
+    background-color: ${(props) => props.theme.colors.borderGray};
   }
 `;
 
