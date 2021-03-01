@@ -157,50 +157,18 @@ function index() {
                   </S.FeaturedTable>
                 </S.Td>
                 <S.Td>
-                  {item === 1 && (
-                    <S.TableText size="lg" isGreen>
-                      30
-                    </S.TableText>
-                  )}
-                  {item === 0 && (
-                    <S.TableText size="lg" isGreen>
-                      20
-                    </S.TableText>
-                  )}
-                  {item === 2 && (
-                    <S.TableText size="lg" isRed>
-                      5
-                    </S.TableText>
-                  )}
+                  {item === 1 && <S.TableText size="lg">30</S.TableText>}
+                  {item === 0 && <S.TableText size="lg">20</S.TableText>}
+                  {item === 2 && <S.TableText size="lg">5</S.TableText>}
                 </S.Td>
                 <S.Td>
-                  {item === 1 && (
-                    <S.TableText size="lg" isRed>
-                      $17
-                    </S.TableText>
-                  )}
-                  {item === 0 && (
-                    <S.TableText size="lg" isRed>
-                      $18
-                    </S.TableText>
-                  )}
-                  {item === 2 && (
-                    <S.TableText size="lg" isRed>
-                      $19
-                    </S.TableText>
-                  )}
+                  {item === 1 && <S.TableText size="lg">$17</S.TableText>}
+                  {item === 0 && <S.TableText size="lg">$18</S.TableText>}
+                  {item === 2 && <S.TableText size="lg">$19</S.TableText>}
                 </S.Td>
                 <S.Td>
-                  {item === 0 && (
-                    <S.TableText isGray isGreen>
-                      Good
-                    </S.TableText>
-                  )}
-                  {item >= 1 && (
-                    <S.TableText isGray isRed>
-                      No Good
-                    </S.TableText>
-                  )}
+                  {item === 0 && <S.TableText>Good</S.TableText>}
+                  {item >= 1 && <S.TableText>No Good</S.TableText>}
                 </S.Td>
                 <S.Td>
                   <Row justifyContent="center">

@@ -267,7 +267,7 @@ export const FeaturedTable = styled(Row)`
 `;
 
 export const Table = styled.table`
-  border: 1px solid ${({ theme }) => theme.colors.textGray};
+  border: 1px solid ${({ theme }) => theme.colors.gray};
 `;
 
 export const TableText = styled(TextSpan)`
@@ -283,7 +283,7 @@ export const Tr = styled.tr``;
 export const TBody = styled.tbody``;
 
 export const Td = styled.td`
-  padding: 22px 30px;
+  padding: 20px 30px;
 `;
 
 export const Th = styled.th`
@@ -295,8 +295,8 @@ export const Th = styled.th`
 
 export const ButtonIcon = styled.div`
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
