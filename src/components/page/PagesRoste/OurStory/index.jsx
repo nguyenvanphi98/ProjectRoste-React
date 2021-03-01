@@ -1,6 +1,8 @@
 import React from "react";
 import * as S from "./styled";
 import Box from "../../../common/Box";
+import Row from "../../../common/Row";
+import { TextSpan } from "../../../common/Text";
 
 import {
   Resto,
@@ -14,6 +16,8 @@ import {
   Gallery_3,
   Gallery_4,
   Gallery_5,
+  DeleteIcon,
+  EditIcon,
 } from "../../../../assets/images";
 
 function index() {
@@ -113,6 +117,106 @@ function index() {
           <span></span>
         </S.MenuButton>
       </S.MenuRoste>
+
+      <S.TableRoste>
+        <Box padding="0 0 35px">
+          <S.Heading1>Table Statistical</S.Heading1>
+        </Box>
+        <S.Table>
+          <S.THead>
+            <S.Tr>
+              <S.Th width="300">
+                <TextSpan size="lsm">Featured</TextSpan>
+              </S.Th>
+              <S.Th width="250">
+                <TextSpan size="lsm">Amount</TextSpan>
+              </S.Th>
+              <S.Th width="250">
+                <TextSpan size="lsm">Price</TextSpan>
+              </S.Th>
+              <S.Th width="250">
+                <TextSpan size="lsm"> Assess</TextSpan>
+              </S.Th>
+              <S.Th width="250">
+                <TextSpan size="lsm">Setting</TextSpan>
+              </S.Th>
+            </S.Tr>
+          </S.THead>
+          <S.TBody>
+            {[0, 1, 2].map((item) => (
+              <S.Tr key={item}>
+                <S.Td>
+                  <S.FeaturedTable>
+                    <Box padding="0 25px 0 0">
+                      <S.FeaturedTableImg
+                        src={item > 0 ? Featured_1 : Featured_2}
+                        alt="img"
+                      />
+                    </Box>
+                    <S.TableText>Pim minim veniam</S.TableText>
+                  </S.FeaturedTable>
+                </S.Td>
+                <S.Td>
+                  {item === 1 && (
+                    <S.TableText size="lg" isGreen>
+                      30
+                    </S.TableText>
+                  )}
+                  {item === 0 && (
+                    <S.TableText size="lg" isGreen>
+                      20
+                    </S.TableText>
+                  )}
+                  {item === 2 && (
+                    <S.TableText size="lg" isRed>
+                      5
+                    </S.TableText>
+                  )}
+                </S.Td>
+                <S.Td>
+                  {item === 1 && (
+                    <S.TableText size="lg" isRed>
+                      $17
+                    </S.TableText>
+                  )}
+                  {item === 0 && (
+                    <S.TableText size="lg" isRed>
+                      $18
+                    </S.TableText>
+                  )}
+                  {item === 2 && (
+                    <S.TableText size="lg" isRed>
+                      $19
+                    </S.TableText>
+                  )}
+                </S.Td>
+                <S.Td>
+                  {item === 0 && (
+                    <S.TableText isGray isGreen>
+                      Good
+                    </S.TableText>
+                  )}
+                  {item >= 1 && (
+                    <S.TableText isGray isRed>
+                      No Good
+                    </S.TableText>
+                  )}
+                </S.Td>
+                <S.Td>
+                  <Row justifyContent="center">
+                    <S.ButtonIcon>
+                      <S.SvgIconSetting src={DeleteIcon} />
+                    </S.ButtonIcon>
+                    <S.ButtonIcon>
+                      <S.SvgIconSetting src={EditIcon} />
+                    </S.ButtonIcon>
+                  </Row>
+                </S.Td>
+              </S.Tr>
+            ))}
+          </S.TBody>
+        </S.Table>
+      </S.TableRoste>
 
       <S.FeaturedRoste>
         <S.FeaturedName>

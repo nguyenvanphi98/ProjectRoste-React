@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Box from "../../../common/Box";
 import Row from "../../../common/Row";
 import { Text, TextSpan } from "../../../common/Text";
+import SVG from "react-inlinesvg";
 
 export const BackgroundRoste = styled.div`
   color: white;
@@ -250,4 +251,64 @@ export const Headding4 = styled.h4``;
 
 export const TextFooter = styled(Text)`
   color: ${({ theme }) => theme.colors.white};
+`;
+
+export const TableRoste = styled(Box)`
+  padding: 0 150px;
+`;
+
+export const FeaturedTableImg = styled.img`
+  width: 35px;
+  height: 35px;
+`;
+
+export const FeaturedTable = styled(Row)`
+  align-items: center;
+`;
+
+export const Table = styled.table`
+  border: 1px solid ${({ theme }) => theme.colors.textGray};
+`;
+
+export const TableText = styled(TextSpan)`
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+`;
+
+export const THead = styled.thead``;
+
+export const Tr = styled.tr``;
+
+export const TBody = styled.tbody``;
+
+export const Td = styled.td`
+  padding: 22px 30px;
+`;
+
+export const Th = styled.th`
+  padding: 22px 30px;
+  span {
+    font-weight: 600;
+  }
+`;
+
+export const ButtonIcon = styled.div`
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.geyser};
+  }
+`;
+
+export const SvgIconSetting = styled(SVG)`
+  svg {
+    height: 15px;
+    width: 15px;
+  }
 `;
